@@ -1,0 +1,270 @@
+/* General CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    background: #f4f7fc;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #042a38;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.sidebar .side-header {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #062c43;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .side-header h2 {
+    display: inline;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.sidebar .side-header .las {
+    font-size: 24px;
+}
+
+.sidebar .side-content {
+    padding: 20px;
+}
+
+.sidebar .profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 10px;
+}
+
+.sidebar .profile h4 {
+    margin-bottom: 5px;
+}
+
+.sidebar .profile small {
+    display: block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar .side-menu ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar .side-menu ul li a {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s;
+}
+
+.sidebar .side-menu ul li a:hover, 
+.sidebar .side-menu ul li a.active {
+    background-color: #024f6a;
+}
+
+.sidebar .side-menu ul li a span {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    transition: all 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content label {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header-content .header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.header-content .header-menu label {
+    margin-right: 20px;
+}
+
+.header-content .header-menu .notify-icon {
+    position: relative;
+    margin-right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header-content .header-menu .notify-icon .notify {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+.header-content .header-menu .user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-content .header-menu .user .bg-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+}
+
+/* Table Styling */
+.table-responsive {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.table-responsive table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table-responsive table th,
+.table-responsive table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.table-responsive table th {
+    background-color: #f5f6fa;
+    font-weight: 500;
+}
+
+.table-responsive table td button {
+    background-color: #024f6a;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.table-responsive table td button:hover {
+    background-color: #023c4d;
+}
+
+/* Alert Box*/
+.alert {
+		  padding: 20px;
+		  background-color: #f44336;
+		  color: white;
+		  opacity: 1;
+		  transition: opacity 0.6s;
+		  margin-bottom: 15px;
+		}
+		
+		.alert.success {background-color: #04AA6D;}
+		.alert.info {background-color: #2196F3;}
+		.alert.warning {background-color: #ff9800;}
+		
+		.closebtn {
+		  margin-left: 15px;
+		  color: white;
+		  font-weight: bold;
+		  float: right;
+		  font-size: 22px;
+		  line-height: 20px;
+		  cursor: pointer;
+		  transition: 0.3s;
+		}
+		
+		.closebtn:hover {
+		  color: black;
+		}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar .side-header h2,
+    .sidebar .profile h4,
+    .sidebar .profile small,
+    .sidebar .side-menu ul li a small {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+    }
+
+    .header-content .header-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
